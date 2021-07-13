@@ -1,0 +1,195 @@
+{
+	"info": {
+		"_postman_id": "b1f69013-f915-427b-99fe-a9f858a9ccec",
+		"name": "Movement",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "list Movements",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8085/movement/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"movement",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "find Movements by customer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8085/movement/numDoc/12345678",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"movement",
+						"numDoc",
+						"12345678"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "new Movements Retiro",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"numDoc\": \"12345678\",\r\n        \"description\": \"Ahorro\",\r\n        \"numAccount\": \"2021-1002\",\r\n        \"amount\": 0.50,\r\n        \"date\": \"2021-07-02T05:00:00.000+00:00\",\r\n        \"typeMov\": \"R\",\r\n        \"status\": 1\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8085/movement/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"movement",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "new Movements Deposito",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"numDoc\": \"12345678\",\r\n        \"description\": \"Ahorro\",\r\n        \"numAccount\": \"2021-1002\",\r\n        \"amount\": 100,\r\n        \"date\": \"2021-07-02T05:00:00.000+00:00\",\r\n        \"typeMov\": \"D\",\r\n        \"status\": 1\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8085/movement/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"movement",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "new Movements Retiro Debito",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"numDoc\": \"12345678\",\r\n        \"description\": \"Ahorro\",\r\n        \"numAccount\": \"2021-1002\",\r\n        \"amount\": 100,\r\n        \"date\": \"2021-07-02T05:00:00.000+00:00\",\r\n        \"typeMov\": \"D\",\r\n        \"status\": 1\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8085/movement/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"movement",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update Movements",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": \"60e8da41fbd4b63008b66871\",\r\n        \"numDoc\": \"12345678\",\r\n        \"description\": \"tranferencia por medio de la app Yanki\",\r\n        \"numAccount\": null,\r\n        \"amount\": 100.0,\r\n        \"date\": \"2021-07-09T23:22:41.497+00:00\",\r\n        \"typeMov\": \"D\",\r\n        \"status\": 1,\r\n        \"debitCardPay\": null,\r\n        \"phone\": \"987465123\",\r\n        \"phoneOrigin\": \"921921921\",\r\n        \"yanki\": true\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8085/movement/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"movement",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete Movements",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8085/movement/60d113a03b205a75e2b80e64",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"movement",
+						"60d113a03b205a75e2b80e64"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
